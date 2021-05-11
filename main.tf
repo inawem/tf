@@ -98,10 +98,10 @@ resource "aws_instance" "myapp-server" {
 	associate_public_ip_address = true
 	user_data = <<EOF
 				#!/bin/bash
-				sudo yum update -y && sudo you install -y docker
-				sudo systemctl start docker
-				sudo  usermod  -aG docker ec2-user
-				docker run -p 8080:80 nginx
+				sudo yum update -y && sudo you install -y httpd.x86_64
+				sudo systemctl start httpd.service 
+				sudo  enable httpd.service 
+				echo "Hello World from Dheeraj $(hostname —f)" > /var/WM/html/index. html 
 			EOF
 			
 	key_name = "terraformkp"
