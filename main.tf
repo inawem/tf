@@ -101,7 +101,7 @@ resource "aws_instance" "myapp-server" {
 				sudo yum update -y && sudo you install -y httpd.x86_64
 				sudo systemctl start httpd.service 
 				sudo  enable httpd.service 
-				echo "Hello World from Dheeraj $(hostname —f)" > /var/WM/html/index. html 
+				echo "Hello World from Dheeraj $(hostname —f)" > /var/WM/html/index.html 
 			EOF
 			
 	key_name = "terraformkp"
